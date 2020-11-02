@@ -9,10 +9,10 @@ dotenv.config({
 
 export default {
   siteMetadata: {
-    title: `Slicks Slices`,
+    title: `Marks Slices`,
     siteUrl: 'https://gatsby.pizza',
     description: 'The best Pizza place in all of Bury! :)',
-    twitter: '@slicksSlices',
+    twitter: '@MarksSlices',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

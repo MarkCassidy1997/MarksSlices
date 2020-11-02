@@ -5,7 +5,6 @@ import stripes from '../assets/images/stripes.svg';
 const LogoStyles = styled.div`
   /* This value controls the entire size of the logo*/
   font-size: 6px;
-  font-size: clamp(1px, 0.65vw, 8px);
   width: 30em;
   height: 30em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -15,6 +14,10 @@ const LogoStyles = styled.div`
   background-size: 150em;
   border: var(--borderSize) solid white;
   display: flex;
+
+  @media (max-width: 800px) {
+    width: auto;
+  }
   .inner {
     margin: var(--borderSize);
     flex: 1;
@@ -65,18 +68,18 @@ const LogoStyles = styled.div`
     &.M {
       --translateX: -0.05;
     }
-    &.l {
+    &.a {
       --rotate: 2deg;
       --scale: 0.8;
       --translateX: 0;
       --translateY: 0;
     }
-    &.i {
+    &.r {
       --scale: 0.9;
       --translateY: -0.1em;
       --translateX: 0;
     }
-    &.c {
+    &.k {
       --rotate: 3deg;
       --scale: 0.9;
       --translateX: 0.05em;
@@ -101,9 +104,9 @@ export default function Logo() {
         <h1>
           <span className="slicks">
             <span className="letter M">M</span>
-            <span className="letter l">a</span>
-            <span className="letter i">r</span>
-            <span className="letter c">k</span>
+            <span className="letter a">a</span>
+            <span className="letter r">r</span>
+            <span className="letter k">k</span>
             <span className="letter apos">'</span>
             <span className="letter s">s</span>
           </span>

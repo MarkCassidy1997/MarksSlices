@@ -4,8 +4,6 @@ import Img from 'gatsby-image';
 import SEO from '../components/SEO';
 
 const SlicemasterPage = ({ data }) => {
-  console.log(data);
-
   const { person } = data;
 
   return (

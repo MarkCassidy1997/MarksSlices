@@ -15,6 +15,16 @@ const OrderStyles = styled.form`
     &.menu {
       grid-column: span 1;
     }
+    input {
+      margin-left: 1rem;
+    }
+    legend {
+      display: block;
+    }
+
+    p {
+      margin: 0;
+    }
   }
   .mapleSyrup {
     display: none;

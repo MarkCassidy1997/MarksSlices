@@ -38,11 +38,25 @@ const NavStyles = styled.nav`
     &:hover {
       --rotate: 3deg;
     }
+
+    @media (max-width: 800px) {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(5) {
+        --rotate: 0;
+      }
+    }
   }
 
   a {
     font-size: 3rem;
     text-decoration: none;
+    display: block;
+
+    @media (max-width: 800px) {
+      font-size: 2rem;
+    }
 
     &:hover {
       color: var(--red);
@@ -51,6 +65,31 @@ const NavStyles = styled.nav`
     &[aria-current='page'] {
       color: var(--red);
     }
+  }
+
+  @media (max-width: 600px) {
+    --columns: 4;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--grey);
+
+    ul {
+      grid-template-rows: auto auto;
+      grid-template-columns: repeat(var(--columns), 1fr);
+
+      .logo-item {
+        order: 0;
+        grid-column: 1 / -1;
+        justify-items: center;
+      }
+      .logo {
+        transform: none;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    --columns: 2;
   }
 `;
 
@@ -63,7 +102,7 @@ const Nav = () => (
       <li>
         <Link to="/pizzas/">Pizza Menu</Link>
       </li>
-      <li>
+      <li className="logo-item">
         <Link to="/">
           <Logo />
         </Link>

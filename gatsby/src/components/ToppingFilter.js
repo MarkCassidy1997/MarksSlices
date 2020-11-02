@@ -17,6 +17,7 @@ const ToppingsStyles = styled.div`
     align-items: center;
     border-radius: 2px;
     text-decoration: none;
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
 
     &:hover {
       text-decoration: underline;
